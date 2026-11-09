@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <clipPath id="leftHalf">
+      <rect x="0" y="0" width="32" height="64" />
+    </clipPath>
+    <clipPath id="rightHalf">
+      <rect x="32" y="0" width="32" height="64" />
+    </clipPath>
+  </defs>
+  <!-- Background Left: Cream, Right: Dark Navy -->
+  <rect x="0" y="0" width="32" height="64" fill="#F3F0E8" />
+  <rect x="32" y="0" width="32" height="64" fill="#0F1117" />
+  
+  <!-- Left Side: Solid Red Hooded Character -->
+  <g clip-path="url(#leftHalf)">
+    <circle cx="32" cy="28" r="14" fill="#111111" />
+    <path d="M16 48 C16 32, 22 18, 32 18 C42 18, 48 32, 48 48 Z" fill="#E8111B" />
+    <!-- White Sunglass Lens -->
+    <rect x="22" y="27" width="8" height="6" rx="1.5" fill="#FFFFFF" />
+    <!-- White Drawstring -->
+    <line x1="28" y1="42" x2="28" y2="54" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" />
+  </g>
+
+  <!-- Right Side: Amber Outline Hooded Character -->
+  <g clip-path="url(#rightHalf)">
+    <circle cx="32" cy="28" r="14" fill="#0B0E14" />
+    <path d="M16 48 C16 32, 22 18, 32 18 C42 18, 48 32, 48 48 Z" fill="none" stroke="#F5B041" stroke-width="2" />
+    <!-- Wireframe ribs -->
+    <ellipse cx="32" cy="26" rx="14" ry="4" fill="none" stroke="#F5B041" stroke-width="1.2" stroke-dasharray="2,2" />
+    <ellipse cx="32" cy="34" rx="15" ry="4.5" fill="none" stroke="#F5B041" stroke-width="1.2" stroke-dasharray="2,2" />
+    <!-- Amber Sunglass Frame -->
+    <rect x="34" y="27" width="8" height="6" rx="1.5" fill="none" stroke="#F5B041" stroke-width="1.5" />
+    <!-- Shoulders wireframe -->
+    <path d="M32 48 L48 54 L44 64" fill="none" stroke="#F5B041" stroke-width="1.5" />
+  </g>
+
+  <!-- Divider Line -->
+  <line x1="32" y1="0" x2="32" y2="64" stroke="#E8111B" stroke-width="1" stroke-dasharray="3,3" opacity="0.6"/>
+</svg>
+

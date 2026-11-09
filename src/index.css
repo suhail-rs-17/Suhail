@@ -1,0 +1,122 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --cream: #F3F0E8;
+  --sand: #ECE7DA;
+  --red: #E8111B;
+  --dark: #111111;
+  --dev-bg: #0F1117;
+  --dev-surface: #161922;
+  --dev-amber: #F5B041;
+  --dev-border: #2A3042;
+}
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+    font-family: 'Inter', sans-serif;
+  }
+
+  body {
+    background-color: #0F1117;
+    color: #E5E7EB;
+    overflow-x: hidden;
+  }
+
+  /* Custom Scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #0F1117;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #2A3042;
+    border-radius: 4px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #E8111B;
+  }
+}
+
+/* Background Grids */
+.bg-cream-grid {
+  background-color: #F3F0E8;
+  background-image: 
+    linear-gradient(to right, rgba(0, 0, 0, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.05) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+.bg-dark-grid {
+  background-color: #0F1117;
+  background-image: 
+    linear-gradient(to right, rgba(245, 176, 65, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(245, 176, 65, 0.04) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+.bg-dot-matrix {
+  background-image: radial-gradient(rgba(245, 176, 65, 0.15) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+/* Glass & Brutalist Styles */
+.brutalist-card-cream {
+  background-color: #F3F0E8;
+  border: 2px solid #111111;
+  box-shadow: 6px 6px 0px #111111;
+  color: #111111;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.brutalist-card-cream:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 8px 8px 0px #E8111B;
+}
+
+.brutalist-card-dev {
+  background-color: #161922;
+  border: 1px solid #2A3042;
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.brutalist-card-dev:hover {
+  transform: translateY(-2px);
+  border-color: #F5B041;
+  box-shadow: 0 14px 40px -10px rgba(245, 176, 65, 0.15);
+}
+
+/* CRT Scanline Effect (optional aesthetic) */
+.scanlines {
+  background: linear-gradient(
+    rgba(18, 16, 16, 0) 50%, 
+    rgba(0, 0, 0, 0.25) 50%
+  ), linear-gradient(
+    90deg,
+    rgba(255, 0, 0, 0.03),
+    rgba(0, 255, 0, 0.01),
+    rgba(0, 0, 255, 0.03)
+  );
+  background-size: 100% 3px, 6px 100%;
+  pointer-events: none;
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
